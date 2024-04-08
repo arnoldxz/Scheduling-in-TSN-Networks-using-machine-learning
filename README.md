@@ -1,0 +1,10 @@
+# Overview
+The massive adoption of Ethernet technology in multiple sectors produces the need to provide deterministic solutions to ensure a Quality of Service (QoS) that meets the requirements of time-triggered flows. For this, the Time-Sensitive Networking (TSN) Task Group (TG) of the IEEE 802.1 developed a set of standards that define mechanisms for time-sensitive transmissions of data over Ethernet networks.
+
+This project focuses on studying the feasibility of scheduling three classes of time-triggered flows with different time constraints over a simple network topology, which is made from two TSN (Time-Sensitive Networking) nodes connected through a link. Scheduling multiple time-triggered flows is a complex problem because the scheduling, if exists, must meet the time constraints of all these flows.
+
+To address this challenge, we explore the potential of using supervised machine learning classification models to accurately predict the feasibility of scheduling a given set of time-triggered flows, meeting their time-constraints, in a Time-Sensitive Network (TSN).
+
+Supervised models require a training dataset that contains a data matrix and a class label vector. To obtain the class label vector of each observation, we use an adaptation of the implementation developed in “A Microservices-based Control Plane for Time Sensitive Networks” by Orozco Urrutia, G.D. of the Integer Linear Programming (ILP) model introduced in; Lander Raagaard M., Pop P., “Optimization algorithms for the scheduling of IEEE 802.1 Time-Sensitive Networking (TSN)”, DTU Technical Report, 35-40 (2017).
+
+Two different models are considered: K-Nearest Neighbours (K-NN) and Support Vector Machine (SVM). These algorithms are tested and built from the application of the Leave One Out Cross-Validation (LOOCV) technique with the generated datasets, and the results obtained are compared and discussed. Finally, a hybrid verification strategy is proposed to train and test machine learning models, drastically reducing the resources and computation time originally required to compute the class label of each observation of the dataset.
